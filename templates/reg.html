@@ -1,0 +1,51 @@
+<html lang="en" >
+
+<head>
+  <meta charset="UTF-8">
+  <title>Review Page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+  </head>
+  <body>
+    <div class="register">
+      <section>
+          <h1 ><strong id="fill">Fill the form to participate in this contest:-</strong><h1>
+            <hr><br><br>
+        <form action="/page2" method='post'>
+         <lable for="name">NAME:</lable> <input type="text" name="name" id="name" value="{{text}}" >
+         <br><br>
+         <lable for="name">PHONE:</lable> <input type="number" id="number" name="number" placeholder="NUMBER">
+         <br><br>
+         <lable for="email">EMAIL:</lable> <input type="email" id="email" name="email" value="{{email}}">
+         <br><br>
+         <lable for="DATE">D.O.B:</lable> <input type="date" id="date" name="date" placeholder="date">
+         <br><br>
+        <lable for="gender">GENDER</lable>
+         <select name="gendar" id="gender">
+          <option value="male">MALE</option>
+          <option value="female">FEMALE</option>
+          <option value="other">SIXER</option>
+         </select>
+         &nbsp; &nbsp; &nbsp;<br><br>
+         <lable for="address">Details Address:-</lable><br><textarea  rows="8" cols="20" id='address' name='address' placeholder='address-:'> </textarea>
+         <br><br>UPLOAD/:-<lable for="identity">IDENTITY</lable>
+         <select name="identity" id="identity">
+          <option value="adharcard">ADDHARCARD</option>
+          <option value="pancard">PANCARD</option>
+          <option value="passport">PASSPORT</option>
+         </select><input type="file" name="card">
+         <br><br><input type="submit" value="SUBMIT FORM" id="submit">
+         <br>
+         
+                 <br><br>
+        </form>
+         
+        </section>
+  </div>
+  <div class="foot">
+ <h3> @PLAY WITH YOUR OWN RISK-:</h3>
+  </div>
+</body>
+</html>
